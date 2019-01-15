@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    function ValideForm() {
+        if(document.getElementById('btnaccepte').checked == true) {document.getElementById('btmvalide').disabled = false }
+        if(document.getElementById('btnaccepte').checked == false) {document.getElementById('btmvalide').disabled = true }
+    }
+    </script> 
+    
+    <form>
+    <p><input type="checkbox" id="btnaccepte" value="valeur" onClick="ValideForm()" /> Choix obligatoire</p>
+    
+    <p><input type="submit" id="btmvalide" value="Valider" disabled /></p>
+    </form>
+
+
+    <input type="checkbox" id="AE_N" value="1">
+        <br>
+        <input type="button" value="Décoche" onclick="ClicAEN()">
+        
+        Par javascript j'ai besoin de le décocher
+        <script type="text/javascript">
+        function ClicAEN(){
+        if (document.getElementById("AE_N").checked==false)
+        {document.getElementById("AE_N").checked=true}
+        else {document.getElementById("AE_N").checked=false}
+        }
+        </script>
