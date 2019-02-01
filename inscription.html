@@ -40,69 +40,65 @@
                         <p>Vous pouvez vous inscrire via le formulaire ci-dessous ou bien, via les réseaux sociaux.</p>
                         <div class="style1">
                             <section>
-                                <form method="post" action="#" id="myForm">
+                                <form method="POST" action="insertBddPpe2.php" id="myForm">
                                     <div class="container">
                                     <hr/>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label for="Prenom">Prenom</label>
-                                                <input type="text" name="Prenom" id="Prenom" required />
+                                                <label for="prenom">Prenom</label>
+                                                <input type="text" name="prenom" id="prenom" pattern="[a-zA-Z]" />
                                             </div>  
                                             <div class="col-md-6">
-                                                <label for="name">Nom</label>
-                                                <input type="text" name="name" id="name" required />
+                                                <label for="nom">Nom</label>
+                                                <input type="text" name="nom" id="nom" pattern="[a-zA-Z]"/>
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <label for="Age">Date de naissance</label>
-                                                <input type="date" name="Age" id="Age" required/>
+                                                <label for="dateNaissance">Date de naissance</label>
+                                                <input type="date" name="dateNaissance" id="dateNaissance"/>
                                             </div>
                                             <div class="col-md-6">
-                                                <label for="lieu_naissance">Lieu de naissance</label>
-                                                <input type="text" id="lieu_naissance" required>
+                                                <label for="lieuNaissance">Lieu de naissance</label>
+                                                <input type="text" id="lieuNaissance"/>
                                             </div>
                                             <div class="col-md-2">
-                                                <label for="Sexe">Sexe (M/F)</label>
-                                                <input type="text" name="Sexe" id="Sexe" required/>
+                                                <label for="sexe">Sexe (M/F)</label>
+                                                <input type="text" name="sexe" id="sexe"/>
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-9">
                                                 <label for="adresse">Adresse actuelle</label>
-                                                <input type="text" name="adresse" id="adresse" required>
+                                                <input type="text" name="adresse" id="adresse"/>
                                             </div>
                                             <div class="col-md-3">
-                                                    <label for="cp">Code postal</label>
-                                                    <input type="text" name="adresse" id="cp" required>
+                                                    <label for="cpAdresse">Code postal</label>
+                                                    <input type="text" name="cpAdresse" id="cpAdresse" pattern="[0-9]{5}"/>
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <label for="tel">Numero de téléphone</label>
-                                                <input type="text" name="tel" id="tel" required>
+                                                <label for="numeroTelephone">Numero de téléphone</label>
+                                                <input type="text" name="numeroTelephone" id="numeroTelephone" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"/>
                                             </div>
                                             <div class="col-md-8">
                                                 <label for="email">Email</label>
-                                                <input type="email" name="email" id="email" required>
+                                                <input type="email" name="email" id="email"/>
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-5">
-                                                <label>Avez-vous déjà skié ?</label> 
-                                                <input type="checkbox" id="btnaccepte_oui" value="oui" onClick="ValideForm_oui()" oninput="check_oui()"/>
-                                                <label for="btnaccepte_oui">oui</label> 
-                                                <input type="checkbox" id="btnaccepte_non" value="non" onClick="ValideForm_non()" oninput="check_non()"/>
-                                                <label for="btnaccepte_non">non</label>                                           
+                                            <label><input type="checkbox" name="tableNom" id="champTest" value="infos2"> adherentsPpe2</label>                                           
                                             </div>
                                             <div class="col-md-7">
                                                 <label>Entrez la dernière médaille obtenue</label>
-                                                <input type="text" list="medaille" required>
-                                                <datalist id="medaille">
+                                                <input type="text" list="medaille">
+                                                <datalist id="nomMedaille" name="nomMedaille">
                                                     <option value="Piou Piou"></option>
                                                     <option value="Blanchot"></option>
                                                     <option value="Sifflote"></option>
@@ -120,7 +116,7 @@
                                         </div>
                                     </div>
                                     <br/>
-                                    <input type="submit" value="valider" id="btmvalide" disabled/>
+                                    <input type="submit" value="valider"/>
                                 </form>
                             </section>
                         <br/>
@@ -197,6 +193,6 @@
 			<script src="assets/js/main.js"></script>
 			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="tarif.js"></script>
+            <script src="assets/js/tarif.js"></script>
     </body>
 </html>

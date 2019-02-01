@@ -80,3 +80,15 @@ function check_non(){
         document.getElementById("btnaccepte_non").checked = true
     }
 }
+
+
+
+function Validate() {
+    var password = document.getElementById("motPasse").value;
+    var confirmPassword = document.getElementById("confirmMotPasse").value;
+    if (password != confirmPassword) {
+        alert("Les mots de passe sont différents");
+        return false;
+    }
+    return true;
+}

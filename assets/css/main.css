@@ -3970,3 +3970,11 @@ body {
 	height: 300px;
 	border: 0;
 }
+
+.invisible-scrollbar::-webkit-scrollbar {
+	display: none;
+  }
+
+.connexionPhp {
+	color: #000000;
+}

@@ -1,3 +1,6 @@
+<?php
+session_start(); // On démarre la session AVANT toute chose
+?>
 <!DOCTYPE HTML>
 <html lang="fr">
 	<head>
@@ -11,20 +14,37 @@
 	<body class="is-preload">
 
 		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<h2>MDC</h2>
-					<nav>
-						<ul>
-							<li><a href="#intro">Bienvenue</a></li>
-							<li><a href="#two">Que faisons nous</a></li>
-							<li><a href="#one">Tarifs <br/>(Inscription / Calendrier)</a></li>
-							<li><a href="#three">Nous contacter</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#intro">Bienvenue</a>	
+				<?php 
+				if (isset($_SESSION['login'])){
+					echo '<span class="connexionPhp">' . $_SESSION['login'] . '</span>';
+				}	
+				?>		  
+			<div class="collapse navbar-collapse " id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#two">Que faisons nous ?</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#one">Tarifs (Inscription / Calendrier)</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#three">Nous contacter</a>
+					</li>
+				</ul>
+				<label class="btn btn-secondary">
+					<a href="inscriptionSite.html">Inscription</a>
+				</label>				
+				<label class="btn btn-secondary">
+					<a href="connexionSite.html">Connexion</a> 
+				</label>
+				<label class="btn btn-secondary">
+					<a href="deconnexionSite.php">Deconnexion</a> 
+				</label>
+			</div>
+		</nav>
+		
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<!-- Intro -->
@@ -228,6 +248,6 @@
 			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-			<script src="tarif.js"></script>
+			<script src="assets/js/tarif.js"></script>
 	</body>
 </html>
