@@ -10,8 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -21,10 +21,10 @@
 					<h2>MDC</h2>
 					<nav>
 						<ul>
-							<li><a href="index.html#intro">Bienvenue</a></li>
-							<li><a href="index.html#two">Que faisons nous</a></li>
-							<li><a href="index.html#one">Tarifs <br/>(Inscription / Calendrier)</a></li>
-							<li><a href="index.html#three">Nous contacter</a></li>
+							<li><a href="../index.php#intro">Bienvenue</a></li>
+							<li><a href="../index.php#two">Que faisons nous</a></li>
+							<li><a href="../index.php#one">Tarifs <br/>(Inscription / Calendrier)</a></li>
+							<li><a href="../index.php#three">Nous contacter</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -40,84 +40,61 @@
                         <p>Vous pouvez vous inscrire via le formulaire ci-dessous ou bien, via les réseaux sociaux.</p>
                         <div class="style1">
                             <section>
-                                <form method="POST" action="insertBddPpe2.php" id="myForm">
-                                    <div class="container">
+                                <div class="container">
+                                    <form action="../assets/php/adherentsForm.php" method="POST" id="myForm">
                                     <hr/>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label for="prenom">Prenom</label>
-                                                <input type="text" name="prenom" id="prenom" pattern="[a-zA-Z]" />
+                                                Prenom : <input type="text" name="prenom">
                                             </div>  
                                             <div class="col-md-6">
-                                                <label for="nom">Nom</label>
-                                                <input type="text" name="nom" id="nom" pattern="[a-zA-Z]"/>
+                                                Nom : <input type="text" name="nom">
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <label for="dateNaissance">Date de naissance</label>
-                                                <input type="date" name="dateNaissance" id="dateNaissance"/>
+                                                Date de naissance : <input type="date" name="dateNaissance">
                                             </div>
                                             <div class="col-md-6">
-                                                <label for="lieuNaissance">Lieu de naissance</label>
-                                                <input type="text" id="lieuNaissance"/>
+                                                Lieu de naissance : <input type="text" name="lieuNaissance">
                                             </div>
                                             <div class="col-md-2">
-                                                <label for="sexe">Sexe (M/F)</label>
-                                                <input type="text" name="sexe" id="sexe"/>
+                                                Sexe : <input type="text" name="sexe" placeholder="H / F">
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-9">
-                                                <label for="adresse">Adresse actuelle</label>
-                                                <input type="text" name="adresse" id="adresse"/>
+                                                Adresse actuelle : <input type="text" name="adresse">
                                             </div>
                                             <div class="col-md-3">
-                                                    <label for="cpAdresse">Code postal</label>
-                                                    <input type="text" name="cpAdresse" id="cpAdresse" pattern="[0-9]{5}"/>
+                                                Code postal : <input type="text" name="cpAdresse">
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <label for="numeroTelephone">Numero de téléphone</label>
-                                                <input type="text" name="numeroTelephone" id="numeroTelephone" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"/>
+                                                Numero de téléphone : <input type="text" name="numeroTelephone">
                                             </div>
                                             <div class="col-md-8">
-                                                <label for="email">Email</label>
-                                                <input type="email" name="email" id="email"/>
+                                                Email : <input type="email" name="email">
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-5">
-                                            <label><input type="checkbox" name="tableNom" id="champTest" value="infos2"> adherentsPpe2</label>                                           
+                                               Avez-vous déjà skié ? <input type="text" name="pratiqueSki" placeholder="oui / non">             
                                             </div>
                                             <div class="col-md-7">
-                                                <label>Entrez la dernière médaille obtenue</label>
-                                                <input type="text" list="medaille">
-                                                <datalist id="nomMedaille" name="nomMedaille">
-                                                    <option value="Piou Piou"></option>
-                                                    <option value="Blanchot"></option>
-                                                    <option value="Sifflote"></option>
-                                                    <option value="Garolou"></option>
-                                                    <option value="Ourson"></option>
-                                                    <option value="Flocon"></option>
-                                                    <option value="1ère étoile"></option>
-                                                    <option value="2ème étoile"></option>
-                                                    <option value="Etoile de Bronze"></option>
-                                                    <option value="Etoile d'Or"></option>
-                                                    <option value="Autre / aucune">
-                                                    </option>
-                                                </datalist>
+                                                Entrez la dernière médaille obtenue : <input type="text" name="nomMedaille">
                                             </div>
                                         </div>
-                                    </div>
                                     <br/>
-                                    <input type="submit" value="valider"/>
-                                </form>
+                                        <input type="submit" value="Valider" name="adherents">
+                                    </form>
+                                </div>
+                                    <br/>                               
                             </section>
                         <br/>
                         <h2>Calendrier</h2>
@@ -129,7 +106,7 @@
                                     <div class="row split">
                                         <div class="col-md-6">
                                             <!-- Image Map Generated by http://www.image-map.net/ -->
-                                            <img src="images/calendrier2redi.png" usemap="#image-map" alt="">
+                                            <img src="../images/calendrier2redi.png" usemap="#image-map" alt="">
 
                                             <map name="image-map">
                                                 <area target="_self" alt="jour de l'an" title="jour de l'an" href="" coords="112,41,14,78" shape="rect"
@@ -184,15 +161,15 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="assets/js/tarif.js"></script>
+            <script src="../assets/js/tarif.js"></script>
     </body>
 </html>

@@ -15,12 +15,7 @@ session_start(); // On démarre la session AVANT toute chose
 
 		<!-- Sidebar -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#intro">Bienvenue</a>	
-				<?php 
-				if (isset($_SESSION['login'])){
-					echo '<span class="connexionPhp">' . $_SESSION['login'] . '</span>';
-				}	
-				?>		  
+			<a class="navbar-brand" href="#intro">Bienvenue</a>			  
 			<div class="collapse navbar-collapse " id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
@@ -33,15 +28,21 @@ session_start(); // On démarre la session AVANT toute chose
 						<a class="nav-link" href="#three">Nous contacter</a>
 					</li>
 				</ul>
-				<label class="btn btn-secondary">
-					<a href="inscriptionSite.html">Inscription</a>
+				<?php 
+				if (isset($_SESSION['login'])){
+					echo '<span class="connexionPhp">' . $_SESSION['login'] . '</span>';
+					echo '&nbsp; &nbsp; <label class="btn btn-secondary">
+						<a href="assets/php/deconnexionSite.php"> Deconnexion</a> 
+					</label>';
+				}else{
+				echo '<label class="btn btn-secondary">
+					<a href="pages/inscriptionSite.html">Inscription</a>
 				</label>				
 				<label class="btn btn-secondary">
-					<a href="connexionSite.html">Connexion</a> 
-				</label>
-				<label class="btn btn-secondary">
-					<a href="deconnexionSite.php">Deconnexion</a> 
-				</label>
+					<a href="pages/connexionSite.html">Connexion</a> 
+				</label';
+				}
+				?>
 			</div>
 		</nav>
 		
@@ -69,22 +70,22 @@ session_start(); // On démarre la session AVANT toute chose
 								<table>
 									<tr>
 										<td>
-											<a href="la_plagne.html"><img src="images/la_plagne.jpg" alt="La plagne" class="image1" title="La plagne"></a>
+											<a href="pages/la_plagne.html"><img src="images/la_plagne.jpg" alt="La plagne" class="image1" title="La plagne"></a>
 											<h4>La plagne</h4>
 										</td>
 										<td>
-											<a href="val_thorens.html"><img src="images/Val_thorens2.jpg" alt="Val thorens" class="image1" title="Val thorens"></a>
+											<a href="pages/val_thorens.html"><img src="images/Val_thorens2.jpg" alt="Val thorens" class="image1" title="Val thorens"></a>
 											<h4>Val thorens</h4>
 										</td>
 										
 									</tr>
 									<tr>
 										<td>
-											<a href="flaine.html"><img src="images/flaine.jpg" alt="flaine" class="image1" title="flaine"></a>
+											<a href="pages/flaine.html"><img src="images/flaine.jpg" alt="flaine" class="image1" title="flaine"></a>
 											<h4>Flaine</h4>
 										</td>
 										<td>
-											<a href="courchevel.html"><img src="images/courchevel2.jpg" alt="courchevel" class="image1" title="courchevel"></a>
+											<a href="pages/courchevel.html"><img src="images/courchevel2.jpg" alt="courchevel" class="image1" title="courchevel"></a>
 											<h4>Courchevel</h4>
 										</td>
 									</tr>
@@ -112,7 +113,7 @@ session_start(); // On démarre la session AVANT toute chose
 														<input type="text" name="enfant1" id="enfant1" value="0" oninput="calcul(formcalcul)" required />
 													</div> 
 													<div class="field half">
-															<label for="enfant2">Enfants entre 12 et 76ans </label>
+															<label for="enfant2">Enfants entre 12 et 16ans </label>
 															<input type="text" name="enfant2" id="enfant2" value="0" oninput="calcul(formcalcul)" required />
 													</div>
 													<div class="field half">
@@ -130,7 +131,7 @@ session_start(); // On démarre la session AVANT toute chose
 													</div>
 													<div class="col-md-offset-2 col-md-2"></div>
 													<div class="col-md-6">
-														<a href="inscription.html" class="button scrolly" id="valider" >S'inscrire / Calendrier</a>	
+														<a href="pages/inscription.html" class="button scrolly" id="valider" >S'inscrire / Calendrier</a>	
 													</div>
 												</div>
 											</form>
@@ -146,11 +147,11 @@ session_start(); // On démarre la session AVANT toute chose
 								<section>
 							<h5>Vous pouvez nous contacter en remplissant se formulaire ou bien avec les réseaux sociaux utilisé.</h5>
 							<br/>
-									<form method="post" action="#">
+									<form method="post" action="assets/php/contact.php">
 										<div class="fields">
 											<div class="field half">
-												<label for="name">Nom</label>
-												<input type="text" name="name" id="name" />
+												<label for="nom">Nom</label>
+												<input type="text" name="nom" id="nom" />
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>

@@ -92,3 +92,15 @@ function Validate() {
     }
     return true;
 }
+
+function SwitchPass(){
+    var typeInput = document.getElementById('motPasse');
+    var txtHREF = document.getElementById('AffPass');
+    if(typeInput.type == 'password'){
+     typeInput.type = 'text';
+     txtHREF.innerHTML = 'Cacher le mot de passe';
+    }
+    else{ typeInput.type = 'password';
+     txtHREF.innerHTML = 'Afficher mot de passe';
+    }
+}
