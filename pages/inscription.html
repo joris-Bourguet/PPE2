@@ -45,50 +45,53 @@
                                     <hr/>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                Prenom : <input type="text" name="prenom">
+                                                Prenom : <input type="text" name="prenom" required>
                                             </div>  
                                             <div class="col-md-6">
-                                                Nom : <input type="text" name="nom">
+                                                Nom : <input type="text" name="nom" required>
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                Date de naissance : <input type="date" name="dateNaissance">
+                                                Date de naissance : <input type="date" name="dateNaissance" required>
                                             </div>
                                             <div class="col-md-6">
-                                                Lieu de naissance : <input type="text" name="lieuNaissance">
+                                                Lieu de naissance : <input type="text" name="lieuNaissance" required>
                                             </div>
                                             <div class="col-md-2">
-                                                Sexe : <input type="text" name="sexe" placeholder="H / F">
+                                                Sexe : <input type="text" name="sexe" placeholder="H / F / A" required> 
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-9">
-                                                Adresse actuelle : <input type="text" name="adresse">
+                                                Adresse actuelle : <input type="text" name="adresse" required>
                                             </div>
                                             <div class="col-md-3">
-                                                Code postal : <input type="text" name="cpAdresse">
+                                                Code postal : <input type="text" name="cpAdresse" required>
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                Numero de téléphone : <input type="text" name="numeroTelephone">
+                                                Numero de téléphone : <input type="text" name="numeroTelephone" required>
                                             </div>
                                             <div class="col-md-8">
-                                                Email : <input type="email" name="email">
+                                                Email : <input type="email" name="email" required>
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-5">
-                                               Avez-vous déjà skié ? <input type="text" name="pratiqueSki" placeholder="oui / non">             
+                                               Avez-vous déjà skié ?
+                                            <br/>
+                                               <input type="checkbox" name="pratiqueSki" id="pratiqueOui" value="oui" onclick="Medaille();"> <label for="pratiqueOui" required> Oui </label>
+                                               <input type="checkbox" name="pratiqueSki" id="pratiqueNon" value="non" onclick="Medaille();"> <label for="pratiqueNon" required> Non </label>          
                                             </div>
-                                            <div class="col-md-7">
-                                                Entrez la dernière médaille obtenue : <input type="text" name="nomMedaille">
-                                            </div>
+                                            <div class="col-md-7" id="niveauMedailles">                                      
+                                                Entrez la derniere medaille obtenu <input type="text" id="nomMedaille" name="nomMedaille" class="form-control">
+                                            </div>    
                                         </div>
                                     <br/>
                                         <input type="submit" value="Valider" name="adherents">
@@ -124,8 +127,8 @@
                                             </map>                                             
                                         </div>
                                         <div class="col-md-6">
-                                            <p>Choix des activité : </p>
-                                            <div id="description"></div> 
+                                            <h3>Choix des activité : </h3>
+                                            <div id="description"></div>
                                         </div>                                         
                                     </div>
                                 <br/>
@@ -146,7 +149,6 @@
                                     </form>
                                 <br/>
                             </section>
-                        <hr/>
                         </div>
                     </div>
 				</section>

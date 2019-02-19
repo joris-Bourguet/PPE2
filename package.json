@@ -1,0 +1,22 @@
+{
+  "name": "ppe2_gros_pc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joris-Bourguet/PPE2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joris-Bourguet/PPE2/issues"
+  },
+  "homepage": "https://github.com/joris-Bourguet/PPE2#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}

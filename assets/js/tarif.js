@@ -56,6 +56,7 @@ for (var i = 0; i < liens.length; i++){
         }
     })
 }
+/*
 function ValideForm_oui() {
     if(document.getElementById('btnaccepte_oui').checked === true) {document.getElementById('btmvalide').disabled = false }
     if(document.getElementById('btnaccepte_oui').checked === false) {document.getElementById('btmvalide').disabled = true }
@@ -79,7 +80,7 @@ function check_non(){
         document.getElementById("btnaccepte_oui").checked = false
         document.getElementById("btnaccepte_non").checked = true
     }
-}
+}*/
 
 
 
@@ -102,5 +103,15 @@ function SwitchPass(){
     }
     else{ typeInput.type = 'password';
      txtHREF.innerHTML = 'Afficher mot de passe';
+    }
+}
+
+document.getElementById('niveauMedailles').disabled = true;
+function Medaille(){
+    if (document.getElementById('pratiqueOui').checked === true){
+        document.getElementById('nomMedaille').disabled = false;
+    }
+    else{
+        document.getElementById('nomMedaille').disabled = true;
     }
 }
