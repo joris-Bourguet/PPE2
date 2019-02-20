@@ -3,7 +3,7 @@
 
     $categorie = $_POST['categorie'];
     
-    $sql =  "SELECT nom, prenom, sexe, pratiqueSki, nomMedaille FROM adherents WHERE nomMedaille = '$categorie'";
+    $sql =  "SELECT nom, prenom, sexe, pratiqueSki, nomMedaille FROM adherents WHERE nomMedaille = '$categorie'" ;
     $sth = $dbh->query($sql); 
     $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     $dbh=NULL; 
