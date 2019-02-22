@@ -40,19 +40,46 @@
 						<div class="col-md-6">
 							<form method="POST" action="../assets/php/participants.php">
 								Entrez la catégorie à visualiser : <select name="categorie" class="form-control">
-									<option value="Piou piou">Piou piou</option>
-									<option value="Flocon">Flocon</option>
-									<option value="Blanchot">Blanchot</option>
-									<option value="Sifflote">Sifflote</option>
-									<option value="Garolou">Garolou</option>
-									<option value="Ourson">Ourson</option>
-									<option value="1ère étoile">1ère étoile</option>
-									<option value="2ème étoile">2ème étoile</option>
-									<option value="3ème étoile">3ème étoile</option>
-									<option value="Etoile de Bronze"> Etoile de Bronze</option>
-									<option value="Etoile d'Or">Etoile d'Or</option>
-									<option value="Compétition freestyle">Compétition Freestyle</option>
-									<option value="Garolou">Garolou</option>
+									<option value="1">Piou piou</option>
+									<option value="2">Flocon</option>
+									<option value="3">Blanchot</option>
+									<option value="4">Sifflote</option>
+									<option value="5">Garolou</option>
+									<option value="6">Ourson</option>
+									<option value="7">1ère étoile</option>
+									<option value="8">2ème étoile</option>
+									<option value="9">3ème étoile</option>
+									<option value="10"> Etoile de Bronze</option>
+									<option value="11">Etoile d'Or</option>
+									<option value="12">Compétition Freestyle</option>
+								</select>
+								<input type="submit" value="Valider" name="ValideCat">
+							</form>
+						</div>
+						<div class="col-offset-md-3 col-md-3"></div>
+					</div>
+                </div>
+			</section>
+			<section id="ResultatCatégorie" class="wrapper style1 fade-up">
+                <div class="container-fluide">
+					<h1 align="center">Resultats</h1>
+					<div class="row">
+						<div class="col-offset-md-3 col-md-3"></div>
+						<div class="col-md-6">
+							<form method="POST" action="../assets/php/Resultat.php">
+								Entrez la catégorie à visualiser : <select name="categorie" class="form-control">
+									<option value="1">Piou piou</option>
+									<option value="2">Flocon</option>
+									<option value="3">Blanchot</option>
+									<option value="4">Sifflote</option>
+									<option value="5">Garolou</option>
+									<option value="6">Ourson</option>
+									<option value="7">1ère étoile</option>
+									<option value="8">2ème étoile</option>
+									<option value="9">3ème étoile</option>
+									<option value="10"> Etoile de Bronze</option>
+									<option value="11">Etoile d'Or</option>
+									<option value="12">Compétition Freestyle</option>
 								</select>
 								<input type="submit" value="Valider" name="ValideCat">
 							</form>

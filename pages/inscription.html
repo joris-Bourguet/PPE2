@@ -56,11 +56,11 @@
                                             <div class="col-md-4">
                                                 Date de naissance : <input type="date" name="dateNaissance" required>
                                             </div>
-                                            <div class="col-md-6">
-                                                Lieu de naissance : <input type="text" name="lieuNaissance" required>
-                                            </div>
-                                            <div class="col-md-2">
+                                            <div class="col-md-4">
                                                 Sexe : <input type="text" name="sexe" placeholder="H / F / A" required> 
+                                            </div>
+                                            <div class="col-md-4">
+                                                Ville : <input type="text" name="ville" required> 
                                             </div>
                                         </div>
                                     <br/>
@@ -69,30 +69,38 @@
                                                 Adresse actuelle : <input type="text" name="adresse" required>
                                             </div>
                                             <div class="col-md-3">
-                                                Code postal : <input type="text" name="cpAdresse" required>
+                                                Code postal : <input type="text" name="cp" required>
                                             </div>
                                         </div>
                                     <br/>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                Numero de téléphone : <input type="text" name="numeroTelephone" required>
+                                                Numero de téléphone : <input type="text" name="telephone" required>
                                             </div>
                                             <div class="col-md-8">
                                                 Email : <input type="email" name="email" required>
                                             </div>
                                         </div>
                                     <br/>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                               Avez-vous déjà skié ?
-                                            <br/>
-                                               <input type="checkbox" name="pratiqueSki" id="pratiqueOui" value="oui" onclick="Medaille();"> <label for="pratiqueOui" required> Oui </label>
-                                               <input type="checkbox" name="pratiqueSki" id="pratiqueNon" value="non" onclick="Medaille();"> <label for="pratiqueNon" required> Non </label>          
-                                            </div>
-                                            <div class="col-md-7" id="niveauMedailles">                                      
-                                                Entrez la derniere medaille obtenu <input type="text" id="nomMedaille" name="nomMedaille" class="form-control">
-                                            </div>    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            Médaille à obtenir :
+                                            <select name="idCategorie" id="idCategorie" class="form-control">
+                                                <option value="1">Piou piou</option>
+                                                <option value="2">Flocon</option>
+                                                <option value="3">Blanchot</option>
+                                                <option value="4">Sifflote</option>
+                                                <option value="5">Garolou</option>
+                                                <option value="6">Ourson</option>
+                                                <option value="7">1ère étoile</option>
+                                                <option value="8">2ème étoile</option>
+                                                <option value="9">3ème étoile</option>
+                                                <option value="10"> Etoile de Bronze</option>
+                                                <option value="11">Etoile d'Or</option>
+                                                <option value="12">Compétition Freestyle</option>
+                                            </select>
                                         </div>
+                                    </div>
                                     <br/>
                                         <input type="submit" value="Valider" name="adherents">
                                     </form>

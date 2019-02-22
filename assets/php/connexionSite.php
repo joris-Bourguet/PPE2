@@ -17,7 +17,7 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
             $login = htmlentities($_POST['login'], ENT_QUOTES, "ISO-8859-1"); // le htmlentities() passera les guillemets en entités HTML, ce qui empêchera les injections SQL
             $motPasse = htmlentities($_POST['motPasse'], ENT_QUOTES, "ISO-8859-1");
             //on se connecte à la base de données:
-            $mysqli = mysqli_connect("localhost", "root", "", "ppe2");
+            $mysqli = mysqli_connect("localhost", "root", "", "testppe2");
             //on vérifie que la connexion s'effectue correctement:
             if(!$mysqli){
                 echo "Erreur de connexion à la base de données.";

@@ -7,7 +7,7 @@
     $motPasse = $_POST['motPasse'];
     $confirmMotPasse = $_POST['confirmMotPasse'];
     
-    $mysqli = mysqli_connect("localhost", "root", "", "ppe2");
+    $mysqli = mysqli_connect("localhost", "root", "", "testppe2");
     $requete = mysqli_query($mysqli,"SELECT * FROM inscriptionSite WHERE pseudo = '".$pseudo."'");
 
     if(mysqli_num_rows($requete) == true) {

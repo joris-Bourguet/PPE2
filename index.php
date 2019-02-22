@@ -28,7 +28,7 @@ session_start(); // On démarre la session AVANT toute chose
 						<a class="nav-link" href="#three">Nous contacter</a>
 					</li>
 					<li>
-						<a class="nav-link" href="pages/participants.php">Voir les participants</a>
+						<a class="nav-link" href="pages/participantsPages.html">Voir les participants</a>
 					</li>
 				</ul>
 				<?php 
