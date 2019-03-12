@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*
 Page: connexion.php
 */
@@ -18,7 +18,7 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
             $motPasse = htmlentities($_POST['motPasse'], ENT_QUOTES, "ISO-8859-1");
             //on se connecte à la base de données:
             $mysqli = mysqli_connect("localhost", "root", "", "testppe2");
-            //on vérifie que la connexion s'effectue correctement:
+            //on vérifie que la connexio3n s'effectue correctement:
             if(!$mysqli){
                 echo "Erreur de connexion à la base de données.";
             } else {

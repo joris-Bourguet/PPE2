@@ -27,9 +27,6 @@ session_start(); // On démarre la session AVANT toute chose
 					<li class="nav-item">
 						<a class="nav-link" href="#three">Nous contacter</a>
 					</li>
-					<li>
-						<a class="nav-link" href="pages/participantsPages.html">Voir les participants</a>
-					</li>
 				</ul>
 				<?php 
 				if (isset($_SESSION['login'])){
@@ -132,9 +129,11 @@ session_start(); // On démarre la session AVANT toute chose
 													<div class="col-md-2">
 														<button class="button" type="reset" value="remettre à 0">Remettre à 0</button>	
 													</div>
-													<div class="col-md-offset-2 col-md-2"></div>
-													<div class="col-md-6">
+													<div class="col-md-3">
 														<a href="pages/inscription.html" class="button scrolly" id="valider" >S'inscrire / Calendrier</a>	
+													</div>
+													<div class="col-md-3">
+														<a href="pages/participantsPages.html" class="button scrolly" id="valider" >Voir les participants</a>	
 													</div>
 												</div>
 											</form>
