@@ -34,7 +34,13 @@ session_start(); // On démarre la session AVANT toute chose
 					echo '&nbsp; &nbsp; <label class="btn btn-secondary">
 						<a href="assets/php/deconnexionSite.php"> Deconnexion</a> 
 					</label>';
-				}else{
+				}elseif (isset($_SESSION['admin'])) {
+					echo '<span class="connexionPhp">' . "Moniteur : " . $_SESSION['admin'] . '</span>';
+					echo '&nbsp; &nbsp; <label class="btn btn-secondary">
+						<a href="assets/php/deconnexionSite.php"> Deconnexion</a> 
+					</label>';
+				}
+				else{
 				echo '<label class="btn btn-secondary">
 					<a href="pages/inscriptionSite.html">Inscription</a>
 				</label>				
