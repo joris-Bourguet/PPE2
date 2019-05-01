@@ -3,7 +3,7 @@
 
     $categorie = $_POST['categorie'];
 
-    $sql =  "SELECT adherents.nom, adherents.prenom, adherents.sexe, testniveau.description, adherents.resultatTest FROM adherents, testniveau WHERE adherents.idCategorie = '$categorie'";
+    $sql =  "SELECT adherents.nom, adherents.prenom, adherents.resultatTest FROM adherents WHERE adherents.idCategorie = '$categorie'";
     $sth = $dbh->query($sql); 
     $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     $dbh=NULL; 
@@ -12,14 +12,12 @@
         echo '<thead>';
             echo '<th>' . '<b>Nom</b>' . '</th>';
             echo '<th>' . '<b>Prenom</b>' . '</th>';
-            echo '<th>' . '<b>Sexe</b>' . '</th>';
             echo '<th>' . '<b>Resultat test</b>' . '</th>';
         echo '</thead>';
         echo '<tbody>';
             echo '<tr>';
                 echo '<td>'; foreach ($result as $row) { echo $row['nom'] . '<br/>'; } echo '</td>';
                 echo '<td>'; foreach ($result as $row) { echo $row['prenom'] . '<br/>'; } echo '</td>';
-                echo '<td>'; foreach ($result as $row) { echo $row['sexe'] . '<br/>'; } echo '</td>';
                 echo '<td>'; foreach ($result as $row) { echo $row['resultatTest'] . '<br/>'; } echo '</td>';
             echo '</tr>';
         echo '</tbody>';

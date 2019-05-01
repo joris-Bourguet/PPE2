@@ -8,6 +8,8 @@
     $categorieAdherent = $sth->fetchAll(PDO::FETCH_ASSOC);
     $dbh=NULL; 
 
+    echo '<h1>Participants</h1>';
+
     echo '<table border="1" width="100%">';
         echo '<thead>';
             echo '<th>' . '<b>Nom</b>' . '</th>';
